@@ -1,0 +1,180 @@
+> To open Wamp server, go to WAMP SERVER in the bottom right icons(hissen icons)--> local host --> new tab will get opened in the default browser(here mozilla)
+  (or) if u give IP address as 127.0.0.1 the server page will get opened
+> Click the link under Tools that says phpinfo(). Your PHP server is up and running
+> Saving your PHP files: Whenever you create a new PHP page, you need to save it in your WWW directory(C:\wamp\www).
+> Launching your PHP scripts: 
+  Suppose you have created a php script called test1.php. To launch this script, you need to add the script name after localhost in your browser. So instead of this:
+	http://localhost/index.php
+  You would type this:
+	http://localhost/test1.php
+  You don't type the name of the wamp folder, however. This would be wrong, for example:
+	c:/wamp/www/test1.php
+  As too would this:
+	http://localhost/www/test1.php
+  Your server knows where the www folder is, so you don't have to type it out: just add the script name to localhost. Likewise, if you create a folder under www then you'd just type this:
+	http://localhost/folder_name/script_name.php
+> PHP Variables:
+	$variable1 = "montana";
+	$variable2 =10;
+> Comments:
+	// 		--> single line comments
+	/*   */ --> multi line comments
+> Comparision Operators:
+		==			Has the same value as
+		!=			is NOT the same value as
+		<			less than
+		>			greater than
+		<=			less than or equal to
+		>=			greater than or equal to
+> Switch-case Example:
+	<?php
+
+		$picture ='church';
+
+		switch ($picture) {
+
+			case 'kitten':
+
+				print('Kitten Picture');
+				break;
+
+			case 'church':
+
+				print('Church Picture');
+				break;
+
+		}
+
+	?>
+  
+> Logical Operators:
+		&&			are both values true?
+		||			is atleast one value true?
+		AND			are both values true?
+		XOR			is atleast one value true but not both
+		OR			is atleast one value true?
+		!			is NOT something
+> PHP Booleans:
+		A Boolean value is one that is in either of two states. They are known as True or False values, in programming. True is usually given a value of 1, and False is given a value of zero. You set them up just like other variables:
+
+			$true_value = 1;
+			$false_value = 0;
+		You can replace the 1 and 0 with the words "true" and "false" (without the quotes).
+> PHP Operator Precedence:
+    */% 		Highest Precedence
+	+-.
+	< <= > >= 
+	=== !==
+    &&
+	||
+	AND
+	XOR
+	OR           Lowest Precedence
+	
+	'===' Example
+			$number = 3;
+			$text = 'three';
+
+			if ($number === $text) {
+
+				print("Same");
+
+			}
+			else {
+
+				print("Not the same");
+
+			}
+> Getting data from HTML forms:
+	- In the form tag of html, use action and method attributes to get the data from the form
+	- Submit a form using get Method
+			<form action="demo_form.asp" method="get">
+				First name: <input type="text" name="fname"><br>
+				Last name: <input type="text" name="lname"><br>
+				<input type="submit" value="Submit">
+			</form>
+		In the URL: http://www.w3schools.com/tags/demo_form_method.asp?fname=sandy&lname=k
+	- Submit a form using post Method
+			<form action="demo_form_method_post.asp" method="post" target="_blank">
+				First name: <input type="text" name="fname"><br>
+				Last name: <input type="text" name="lname"><br>
+				<input type="submit" value="Submit">
+			</form>
+		In the URL: http://www.w3schools.com/tags/demo_form_method_post.asp
+	NOTE: When clicked on the submit button, the input will be sent to a page on the server called "demo_form_method_post.asp"
+	- METHOD:
+		The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute).
+
+		The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+	
+		Notes on GET:
+		+Appends form-data into the URL in name/value pairs
+		+The length of a URL is limited (about 3000 characters)
+		+Never use GET to send sensitive data! (will be visible in the URL)
+		+Useful for form submissions where a user want to bookmark the result
+		+GET is better for non-secure data, like query strings in Google
+
+		Notes on POST:
+		+Appends form-data inside the body of the HTTP request (data is not shown is in URL)
+		+Has no size limitations
+		+Form submissions with POST cannot be bookmarked
+		
+	- ASP(Active Server Pages)
+		+An ASP file can contain text, HTML tags and scripts. Scripts in an ASP file are executed on the server.
+		+Difference between ASP file and HTML: When a browser requests an HTML file, the server returns the file. 
+		When a browser requests an ASP file, IIS(Internet Information Services) passes the request to the ASP engine. The ASP engine reads the ASP file, 
+		line by line, and executes the scripts in the file. Finally, the ASP file is returned to the browser as plain HTML
+		+Dynamically edit, change, or add any content of a Web page
+		+Respond to user queries or data submitted from HTML forms
+		+Access any data or databases and return the results to a browser
+		+Customize a Web page to make it more useful for individual users
+		+The advantages of using ASP instead of CGI and Perl, are those of simplicity and speed
+		+Provide security - since ASP code cannot be viewed from the browser
+		+Clever ASP programming can minimize the network traffic
+Note: Because ASP scripts are executed on the server, the browser that displays the ASP file does not need to support scripting at all!	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
